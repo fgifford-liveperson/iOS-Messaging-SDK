@@ -1,0 +1,23 @@
+{
+  "applinks": {
+      "apps": [],
+      "details": [
+           {
+             "appIDs": [ "YD9E38LGAJ.fgifford.LivePerson.com.SampleApp" ],
+             "components": [
+               {
+                  "/": "/test",
+                  "comment": "A test URL iOS 13+ syntax"
+               }
+             ]
+           },
+           {
+             "appID": "YD9E38LGAJ.fgifford.LivePerson.com.SampleApp",
+             "paths": [ "/test" ]
+           }
+       ]
+   },
+   "webcredentials": {
+      "apps": [ "YD9E38LGAJ.fgifford.LivePerson.com.SampleApp" ]
+   }
+}

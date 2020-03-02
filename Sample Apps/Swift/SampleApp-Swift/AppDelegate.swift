@@ -32,6 +32,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
         LPMessagingSDK.instance.handlePush(userInfo)
     }
+
+    func application(_ application: UIApplication,
+                     continue userActivity: NSUserActivity,
+                     restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool
+    {
+        // Get URL components from the incoming user activity
+        guard userActivity.activityType == NSUserActivityTypeBrowsingWeb,
+            let incomingURL = userActivity.webpageURL,
+            let components = NSURLComponents(url: incomingURL, resolvingAgainstBaseURL: true) else {
+                return false
+        }
+
+        // Check for specific URL components that you need
+        guard let path = components.path else {
+                return false
+        }
+        debugPrint("path = \(path)")
+        return true
+    }
 }
 
 //MARK: - LPMessagingSDKNotificationDelegate
