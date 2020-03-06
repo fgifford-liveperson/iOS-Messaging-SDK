@@ -10,7 +10,7 @@ import UIKit
 import LPMessagingSDK
 import UserNotifications
 
-@UIApplicationMain
+//@UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
