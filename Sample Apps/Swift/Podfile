@@ -4,5 +4,5 @@ source 'https://github.com/LivePersonInc/iOSPodSpecs.git' #LiveEngage Pod Reposi
 
 target 'SampleApp' do
   #LPMessagingSDK Includes: LPAMS.framework, LPInfra.framework, LPMessagingSDK.framework and  LPMessagingSDKModels.bundle
-  pod 'LPMessagingSDK','5.2.2.10'
+  pod 'LPMessagingSDK','5.2.1.1306-Swift-5.3-Beta-4'
 end
